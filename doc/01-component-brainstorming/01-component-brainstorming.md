@@ -1,12 +1,10 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Othon DeAssis
+- **Dot Number**: deassis.2
+- **Due Date**: 09/16/2024
 
 ## Assignment Overview
-
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,8 +27,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -52,8 +48,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -66,8 +60,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -98,23 +90,13 @@ do good work.
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
-
 ## Assignment
 
-<!-- TODO: read the assignment section then delete this comment -->
-
 As previously stated, you are tasked with brainstorming 3 possible components.
-To aid you in this process, we have provided [some example components][example-components]
-that may help you in your brainstorming. All of these components were made at
-some point by one of your peers, so you should feel confident that you can
-accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
+To aid you in this process, we have provided [some example components]
+[example-components] that may help you in your brainstorming. All of these
+components were made at some point by one of your peers, so you should feel
+confident that you can accomplish any of them.
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -123,8 +105,6 @@ etc. Make of this whatever seems interesting to you, and keep in mind that
 you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -157,10 +137,10 @@ format, we can be more confident that your designs will be possible.
         mutate `this`.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-        - No. All methods work with integers or other NaturalNumbers.
+      - No. All methods work with integers or other NaturalNumbers.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-        - Yes. NaturalNumber is base 10, and we track that in a constant called
+      - Yes. NaturalNumber is base 10, and we track that in a constant called
           `RADIX`.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
@@ -192,70 +172,97 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Linear Algebra Vector Graphing
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Obtain and create matrices then display.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - addNumber();
+    removeNumber();
+    declareMXN();
+    removeMXN();
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - echelonR();
+    multiply();
+    add();
+    advanced();
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, but the user is able to create as many matrices as they want, so
+      they canmanipulate it to it being mutable. Like transposing
+      graphs / matrices.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No because there is no reason for it.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - The only constant would be declared by the user, and they can't change
+      it, only delete and create it.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Not sure.
 
-
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Chess Notation PGN Component
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - A Chess Database that holds PGN steps and notations.  It will also store
+    other vital information that took place during the game.  Clients are able
+    to manipulate the information, obtain information, remove information, and
+    create their own data sets.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - public void addTurn(int x, String whiteMove, String blackMove);
+    public void removeTurn(int i);
+    public int numberOfTurns();
+    public void addMetadata(String key, String value);
+    public String removeMetadata(String key);
+    public boolean hasMetadata(String key);
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - equals();
+    toString();
+    grabWinner();
+    displayPGN();
+    displayPGNOrganized();
+    checkAmount();
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes because data can be inputted incorrectly, and the list of moves and
+      notations would have to change sizes multiple times.  Other methods would
+      also change sizes.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't know if it's necessary, but I wouldn't be surprised if I do use
+      Map.Pair.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, but probably only once.  The enums would be the move amount, but I
+      can easily not make it an enum and have the accessibility for it to be
+      mutable.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I believe so but I am not sure yet.
 
-
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: Music Theory Component
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Analyze songs then create components about the music theory used in the
+    song.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - obtainSong();
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - findKey(); findBPM(); findChordP(); transpose();
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't know.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No because there is no reason to use it.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - After obtaining the song, it would create a constant to not get confused
+      with other inputs;.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Not sure.
 
 ## Post-Assignment
 
@@ -263,8 +270,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -303,8 +308,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
 this [Markdown to PDF guide][markdown-to-pdf-guide]. However, PDFs should be
@@ -313,11 +316,7 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
-
 ### Peer Review
-
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
@@ -343,8 +342,6 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
