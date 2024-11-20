@@ -1,3 +1,7 @@
+package components.chess;
+
+import components.standard.Standard;
+
 /**
  * The ChessNotationKernel interface defines the operations for managing and
  * manipulating a chess game's move notation and metadata. It supports adding
@@ -14,7 +18,8 @@
  * This interface extends Iterable<ChessNotation>, allowing for easy iteration
  * through the game's recorded notations.
  */
-public interface ChessNotationKernel extends Iterable<ChessNotation> {
+public interface ChessNotationKernel
+        extends Standard<ChessNotation>, Iterable<String> {
     /**
      * Adds a chess turn to the notation.
      *

@@ -1,3 +1,5 @@
+package components.chess;
+
 import java.util.Iterator;
 
 /**
@@ -20,9 +22,19 @@ public abstract class ChessNotationSecondary implements ChessNotation {
             return true;
         }
 
+        if (o == null) {
+            return false;
+        }
+
+        if (!(o instanceof ChessNotation)) {
+            return false;
+        }
+
+        ChessNotation notation = (ChessNotation) o;
+
         //create iterators for both collections
-        Iterator<String> it1 = this.moves.iterator();
-        Iterator<String> it2 = other.moves.iterator();
+        Iterator<String> it1 = this.iterator();
+        Iterator<String> it2 = notation.iterator();
 
         //compare elements
         while (it1.hasNext() && it2.hasNext()) {
@@ -36,6 +48,11 @@ public abstract class ChessNotationSecondary implements ChessNotation {
         }
 
         return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.numberOfTurns();
     }
 
 }
