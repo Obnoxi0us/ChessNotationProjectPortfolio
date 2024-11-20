@@ -121,7 +121,7 @@ hierarchy diagram using whatever tools you would like. Then, include a picture
 of it in this folder. You may also embed it just below using markdown syntax
 (i.e., `[ALT TEXT](path/to/file)`).
 
-![alt text](image.png)
+![alt text](C:\Users\Othon\Documents\GitHub\ChessNotationProjectPortfolio\doc\03-component-interfaces\e6ba5c1d34388c7a76c32f6c6d9dfc3e.png)
 
 To start making your interfaces, make a branch off of main in your new repo
 called something like `interfaces`. There are many ways to do this, but my
