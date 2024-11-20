@@ -8,8 +8,8 @@
  * progress through chess notations and metadata, allowing for modifications,
  * retrieval, and manipulation of the game's moves and associated information.
  *
- * The methods in this interface ensure the chess game's notation, maintaining
- * valid indexing for turns and ensuring correct metadata.
+ * This interface ensure the chess game's notation, maintaining valid indexing
+ * for turns and ensuring correct metadata.
  *
  * This interface extends Iterable<ChessNotation>, allowing for easy iteration
  * through the game's recorded notations.
@@ -88,5 +88,4 @@ public interface ChessNotationKernel extends Iterable<ChessNotation> {
      *          otherwise false.
      */
     boolean hasMetadata(String key);
-
 }
