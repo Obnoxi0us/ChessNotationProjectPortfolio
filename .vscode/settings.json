@@ -26,8 +26,8 @@
     "java.format.settings.url": ".vscode/osu-cse-formatter.xml",
     "java.format.settings.profile": "OSU CSE",
     "java.project.sourcePaths": [
-        "src",
-        "test"
+        "test",
+        "ChessNotation"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
