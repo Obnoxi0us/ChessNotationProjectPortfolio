@@ -1,3 +1,6 @@
+/**
+ *
+ */
 public interface ChessNotation extends ChessNotationKernel {
     void displayGame();
 
