@@ -85,27 +85,27 @@ public abstract class ChessNotationSecondary implements ChessNotation {
             sb.append("White: ").append(turn[0]).append(" | Black: ")
                     .append(turn[1]).append("\n");
         }
+        sb.append("\n"); //adding the newline at the end
         System.out.println(sb.toString());
     }
 
     @Override
     public int checkAmount() {
-        int checkCount = 0;
+        int count = 0;
 
-        // Loop through all turns
+        // Loop through all the turns in the game
         for (String[] turn : this.turns) {
-            // Print the turn as a list of two elements (move and description)
-            System.out.println("Checking turn: Move: " + turn[0]
-                    + ", Description: " + turn[1]);
-
-            // Check for "check" in move or description
-            if (turn[0].contains("check") || turn[0].contains("+")
-                    || turn[0].contains("++") || turn[1].contains("check")
-                    || turn[1].contains("+") || turn[1].contains("++")) {
-                checkCount++;
+            // Iterate over each move (white and black)
+            for (String move : turn) {
+                // Count if the move contains the word "check" or a "+" (check) but does not end with "#"
+                if ((move.contains("check") || move.contains("+"))
+                        && !move.contains("#")) {
+                    count++;
+                }
             }
         }
-        return checkCount;
+
+        return count;
     }
 
     /**

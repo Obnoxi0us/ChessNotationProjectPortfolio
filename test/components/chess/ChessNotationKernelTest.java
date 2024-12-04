@@ -26,7 +26,7 @@ public class ChessNotationKernelTest {
 
             @Override
             public void clear() {
-                //no-op implementation for testing
+                //no-op implementation for testin
             }
 
             @Override
