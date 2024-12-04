@@ -1,11 +1,21 @@
 package components.chess;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 /**
- *
+ * Abstract class for implementing chess notation functionality.
  */
 public abstract class ChessNotationSecondary implements ChessNotation {
+
+    //list to hold the turns of chess game (white and black moves)
+    protected List<String[]> turns;
+
+    public ChessNotationSecondary() {
+        this.turns = new ArrayList<>();
+    }
+
     /**
      * Compares 'this' object to the object for equality. Checks if both objects
      * are of the same type and if their contained move collections (or any
@@ -17,42 +27,132 @@ public abstract class ChessNotationSecondary implements ChessNotation {
      */
     @Override
     public boolean equals(Object o) {
-        //if the objects are the same instance
         if (this == o) {
             return true;
         }
 
-        if (o == null) {
+        if (o == null || this.getClass() != o.getClass()) {
             return false;
         }
 
-        if (!(o instanceof ChessNotation)) {
-            return false;
-        }
+        ChessNotationSecondary that = (ChessNotationSecondary) o;
 
-        ChessNotation notation = (ChessNotation) o;
-
-        //create iterators for both collections
-        Iterator<String> it1 = this.iterator();
-        Iterator<String> it2 = notation.iterator();
-
-        //compare elements
-        while (it1.hasNext() && it2.hasNext()) {
-            String x1 = it1.next();
-            String x2 = it2.next();
-
-            //use equals method to compare the move strings
-            if (!x1.equals(x2)) {
-                return false;
-            }
-        }
-
-        return true;
+        //checks if turns are equal
+        return this.turns.equals(that.turns);
     }
 
+    /**
+     * Generates a hashCode for the object based on its internal state (number
+     * of turns).
+     *
+     * @return a hash code value.
+     */
     @Override
     public int hashCode() {
-        return this.numberOfTurns();
+        return this.turns.hashCode();
     }
 
+    /**
+     * Returns a string representation of the chess game, including moves and
+     * metadata.
+     *
+     * @return A string representation of the entire game, moves, and metadata.
+     */
+    @Override
+    public String toString() {
+        StringBuilder gameRepresentation = new StringBuilder();
+
+        //add all turns to the string
+        Iterator<String> iterator = this.iterator();
+        while (iterator.hasNext()) {
+            gameRepresentation.append(iterator.next()).append("\n");
+        }
+
+        return gameRepresentation.toString();
+    }
+
+    /**
+     * Displays the entire chess game, including all moves and game details.
+     */
+    @Override
+    public void displayGame() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < this.turns.size(); i++) {
+            String[] turn = this.turns.get(i);
+            sb.append("Turn ").append(i + 1).append(": ");
+            sb.append("White: ").append(turn[0]).append(" | Black: ")
+                    .append(turn[1]).append("\n");
+        }
+        System.out.println(sb.toString());
+    }
+
+    /**
+     * Dumps the chess notation, providing a detailed or raw textual
+     * representation of the moves.
+     */
+    @Override
+    public void dumpNotation() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Chess Notation Dump:\n");
+        for (int i = 0; i < this.turns.size(); i++) {
+            String[] turn = this.turns.get(i);
+            sb.append("Turn ").append(i + 1).append(": ");
+            sb.append("White: ").append(turn[0]).append(" | Black: ")
+                    .append(turn[1]).append("\n");
+        }
+        System.out.println(sb.toString());
+    }
+
+    /**
+     * Obtains the total number of checks in the game, including checkmate.
+     *
+     * @return the total number of checks in the game.
+     */
+    @Override
+    public int checkAmount() {
+        int checkCount = 0;
+        // Placeholder logic to count checks
+        for (String[] turn : this.turns) {
+            if (turn[0].contains("check") || turn[1].contains("check")) {
+                checkCount++;
+            }
+        }
+        return checkCount;
+    }
+
+    /**
+     * Custom iterator method to iterate through the turns and return individual
+     * moves (as strings). Each turn is represented as an array of two strings
+     * (white and black moves). The iterator will flatten the turns into
+     * individual strings (white and black moves).
+     *
+     * @return an iterator for the moves in the game.
+     */
+    @Override
+    public Iterator<String> iterator() {
+        return new Iterator<String>() {
+            private int turnIndex = 0;
+            private int moveIndex = 0;
+
+            @Override
+            public boolean hasNext() {
+                return this.turnIndex < ChessNotationSecondary.this.turns.size()
+                        && (this.moveIndex < 2
+                                || this.turnIndex < +ChessNotationSecondary.this.turns
+                                        .size() - 1);
+            }
+
+            @Override
+            public String next() {
+                String move = ChessNotationSecondary.this.turns
+                        .get(this.turnIndex)[this.moveIndex];
+                this.moveIndex++;
+                if (this.moveIndex == 2) {
+                    this.moveIndex = 0;
+                    this.turnIndex++;
+                }
+                return move;
+            }
+        };
+    }
 }
