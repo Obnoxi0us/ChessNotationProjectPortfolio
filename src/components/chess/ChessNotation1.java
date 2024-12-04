@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ *
  * Implementation of the ChessNotation1 class.
  */
 public abstract class ChessNotation1 extends ChessNotationSecondary {
