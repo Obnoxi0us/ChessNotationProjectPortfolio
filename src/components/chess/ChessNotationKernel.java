@@ -89,7 +89,7 @@ public interface ChessNotationKernel
      * @param key
      *            the key to check for existence in the metadata.
      * @return true if the metadata with the given key exists, false otherwise.
-     * @ensures the return value is true if the key is found in the metadata,
+     * @ensures thea return value is true if the key is found in the metadata,
      *          otherwise false.
      */
     boolean hasMetadata(String key);

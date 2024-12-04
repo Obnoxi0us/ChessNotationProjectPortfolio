@@ -29,6 +29,10 @@ public abstract class ChessNotation1 extends ChessNotationSecondary {
         this.metadata = new HashMap<>();
     }
 
+    public Map<String, String> getMetadata() {
+        return this.metadata;
+    }
+
     @Override
     public void addTurn(int x, String whiteMove, String blackMove) {
         //check preconditions
