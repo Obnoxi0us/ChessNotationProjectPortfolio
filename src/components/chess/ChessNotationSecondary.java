@@ -72,21 +72,6 @@ public abstract class ChessNotationSecondary implements ChessNotation {
     }
 
     /**
-     * Displays the entire chess game, including all moves and game details.
-     */
-    @Override
-    public void displayGame() {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < this.turns.size(); i++) {
-            String[] turn = this.turns.get(i);
-            sb.append("Turn ").append(i + 1).append(": ");
-            sb.append("White: ").append(turn[0]).append(" | Black: ")
-                    .append(turn[1]).append("\n");
-        }
-        System.out.println(sb.toString());
-    }
-
-    /**
      * Dumps the chess notation, providing a detailed or raw textual
      * representation of the moves.
      */
@@ -103,17 +88,20 @@ public abstract class ChessNotationSecondary implements ChessNotation {
         System.out.println(sb.toString());
     }
 
-    /**
-     * Obtains the total number of checks in the game, including checkmate.
-     *
-     * @return the total number of checks in the game.
-     */
     @Override
     public int checkAmount() {
         int checkCount = 0;
-        // Placeholder logic to count checks
+
+        // Loop through all turns
         for (String[] turn : this.turns) {
-            if (turn[0].contains("check") || turn[1].contains("check")) {
+            // Print the turn as a list of two elements (move and description)
+            System.out.println("Checking turn: Move: " + turn[0]
+                    + ", Description: " + turn[1]);
+
+            // Check for "check" in move or description
+            if (turn[0].contains("check") || turn[0].contains("+")
+                    || turn[0].contains("++") || turn[1].contains("check")
+                    || turn[1].contains("+") || turn[1].contains("++")) {
                 checkCount++;
             }
         }

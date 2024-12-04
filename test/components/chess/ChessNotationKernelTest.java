@@ -36,6 +36,9 @@ public class ChessNotationKernelTest {
         };
     }
 
+    /**
+     * Test for addTurn.
+     */
     @Test
     public void testAddTurn1OneTurnAdded() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -45,6 +48,9 @@ public class ChessNotationKernelTest {
         assertEquals(1, chessNotation.numberOfTurns()); //one turn should be added
     }
 
+    /**
+     * Test for addTurn.
+     */
     @Test
     public void testAddTurn2TwoTurnsAdded() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -57,6 +63,9 @@ public class ChessNotationKernelTest {
         assertEquals(2, chessNotation.numberOfTurns()); //two turns should be added
     }
 
+    /**
+     * Test for addTurn.
+     */
     @Test
     public void testAddTurn3MultipleTurnsAdded() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -70,6 +79,9 @@ public class ChessNotationKernelTest {
         assertEquals(3, chessNotation.numberOfTurns()); //three turns should be added
     }
 
+    /**
+     * Test for addTurn.
+     */
     @Test
     public void testAddTurn4AddTurnAtIndex1() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -86,6 +98,10 @@ public class ChessNotationKernelTest {
         assertEquals(3, chessNotation.numberOfTurns()); //three turns should be added
     }
 
+    /**
+     * Test for addTurn.
+     */
+    @Test
     public void testAddTurn5RemoveTurn() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
 
@@ -104,6 +120,9 @@ public class ChessNotationKernelTest {
         assertEquals(0, chessNotation.numberOfTurns()); //no turns should remain
     }
 
+    /**
+     * Test for addTurn.
+     */
     @Test
     public void testRemoveTurn1BasicCase() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -120,6 +139,9 @@ public class ChessNotationKernelTest {
 
     }
 
+    /**
+     * Test for removeTurn.
+     */
     @Test
     public void testRemoveTurn2EmptyList() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -139,6 +161,9 @@ public class ChessNotationKernelTest {
         assertEquals(0, chessNotation.numberOfTurns());
     }
 
+    /**
+     * Test for removeTurn.
+     */
     @Test
     public void testRemoveTurn3Index0() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -154,6 +179,9 @@ public class ChessNotationKernelTest {
         assertEquals(2, chessNotation.numberOfTurns()); //now there should be 2 turns
     }
 
+    /**
+     * Test for removeTurn.
+     */
     @Test
     public void testRemoveTurn4LastIndex() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -169,6 +197,9 @@ public class ChessNotationKernelTest {
         assertEquals(2, chessNotation.numberOfTurns()); //now there should be 2 turns
     }
 
+    /**
+     * Test for removeTurn.
+     */
     @Test
     public void testRemoveTurn5InvalidIndex() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -190,6 +221,9 @@ public class ChessNotationKernelTest {
         assertEquals(2, chessNotation.numberOfTurns());
     }
 
+    /**
+     * Test for numberOfTurns.
+     */
     @Test
     public void testNumberOfTurns1BasicCase() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -212,6 +246,9 @@ public class ChessNotationKernelTest {
         assertEquals(2, chessNotation.numberOfTurns());
     }
 
+    /**
+     * Test for numberOfTurns.
+     */
     @Test
     public void testNumberOfTurns2NoTurns() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -220,6 +257,9 @@ public class ChessNotationKernelTest {
         assertEquals(0, chessNotation.numberOfTurns());
     }
 
+    /**
+     * Test for numberOfTurns.
+     */
     @Test
     public void testNumberOfTurns3OneTurn() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -234,6 +274,9 @@ public class ChessNotationKernelTest {
         assertEquals(1, chessNotation.numberOfTurns());
     }
 
+    /**
+     * Test for numberOfTurns.
+     */
     @Test
     public void testNumberOfTurns4AddRemoveMultipleTurns() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -258,6 +301,9 @@ public class ChessNotationKernelTest {
         assertEquals(0, chessNotation.numberOfTurns());
     }
 
+    /**
+     * Test for numberOfTurns.
+     */
     @Test
     public void testNumberOfTurns5RemoveInvalidIndex() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -284,6 +330,9 @@ public class ChessNotationKernelTest {
         assertEquals(2, chessNotation.numberOfTurns());
     }
 
+    /**
+     * Test for addMetadata.
+     */
     @Test
     public void testAddMetadata1SingleEntry() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -295,6 +344,9 @@ public class ChessNotationKernelTest {
         assertEquals("12345", chessNotation.getMetadata().get("gameId"));
     }
 
+    /**
+     * Test for addMetadata.
+     */
     @Test
     public void testAddMetadata2TwoDataEntries() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -309,6 +361,9 @@ public class ChessNotationKernelTest {
                 chessNotation.getMetadata().get("event"));
     }
 
+    /**
+     * Test for addMetadata.
+     */
     @Test
     public void testAddMetadata3Overwrite() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -323,6 +378,9 @@ public class ChessNotationKernelTest {
         assertEquals("67890", chessNotation.getMetadata().get("gameId"));
     }
 
+    /**
+     * Test for addMetadata.
+     */
     @Test
     public void testAddMetadata4MultipleEntries() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -339,6 +397,9 @@ public class ChessNotationKernelTest {
         assertEquals("2024-12-04", chessNotation.getMetadata().get("date"));
     }
 
+    /**
+     * Test for addMetadata.
+     */
     @Test
     public void testAddMetadata5ValidKeyValue() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -354,6 +415,9 @@ public class ChessNotationKernelTest {
                 chessNotation.getMetadata().get("player2"));
     }
 
+    /**
+     * Test for removeMetadata.
+     */
     @Test
     public void testRemoveMetadata1BasicCase() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -378,6 +442,9 @@ public class ChessNotationKernelTest {
                 chessNotation.getMetadata().get("event"));
     }
 
+    /**
+     * Test for removeMetadata.
+     */
     @Test
     public void testRemoveMetadata2Nonexistent() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -395,6 +462,9 @@ public class ChessNotationKernelTest {
         assertEquals(null, chessNotation.getMetadata().get("event"));
     }
 
+    /**
+     * Test for removeMetadata.
+     */
     @Test
     public void testRemoveMetadata3All() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -412,6 +482,9 @@ public class ChessNotationKernelTest {
         assertEquals(null, chessNotation.getMetadata().get("event"));
     }
 
+    /**
+     * Test for removeMetadata.
+     */
     @Test
     public void testRemoveMetadata4AfterClear() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -429,6 +502,9 @@ public class ChessNotationKernelTest {
         assertEquals(null, chessNotation.getMetadata().get("gameId"));
     }
 
+    /**
+     * Test for removeMetadata.
+     */
     @Test
     public void testRemoveMetadata5FromEmptyMap() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -440,6 +516,9 @@ public class ChessNotationKernelTest {
         assertEquals(null, chessNotation.getMetadata().get("nonExistentKey"));
     }
 
+    /**
+     * Test for hasMetadata.
+     */
     @Test
     public void testHasMetadata1AddMetadata() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -453,6 +532,9 @@ public class ChessNotationKernelTest {
         assertTrue(chessNotation.hasMetadata("event")); //return true
     }
 
+    /**
+     * Test for hasMetadata.
+     */
     @Test
     public void testHasMetadata2NonExistentKey() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -465,6 +547,9 @@ public class ChessNotationKernelTest {
         assertFalse(chessNotation.hasMetadata("nonExistentKey")); //should return false
     }
 
+    /**
+     * Test for hasMetadata.
+     */
     @Test
     public void testHasMetadata3EmptyCase() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -474,6 +559,9 @@ public class ChessNotationKernelTest {
         assertFalse(chessNotation.hasMetadata("event")); //should return false
     }
 
+    /**
+     * Test for hasMetadata.
+     */
     @Test
     public void testHasMetadata4CaseSensitivity() {
         ChessNotation1 chessNotation = this.createNewChessNotation();
@@ -485,6 +573,9 @@ public class ChessNotationKernelTest {
         assertFalse(chessNotation.hasMetadata("GameId")); //return false
     }
 
+    /**
+     * Test for hasMetadata.
+     */
     @Test
     public void testHasMetadata5AfterRemove() {
         ChessNotation1 chessNotation = this.createNewChessNotation();

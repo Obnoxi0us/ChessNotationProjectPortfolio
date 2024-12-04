@@ -3,20 +3,24 @@ package components.chess;
 import components.standard.Standard;
 
 /**
- * The ChessNotationKernel interface defines the operations for managing and
- * manipulating a chess game's move notation and metadata. It supports adding
- * and removing turns, querying the total number of turns, and managing
- * additional metadata associated with the game.
+ * @author Othon DeAssis
+ * @date 12/04/2024
  *
- * This interface is designed to be implemented by classes that track the game's
- * progress through chess notations and metadata, allowing for modifications,
- * retrieval, and manipulation of the game's moves and associated information.
+ *       The ChessNotationKernel interface defines the operations for managing
+ *       and manipulating a chess game's move notation and metadata. It supports
+ *       adding and removing turns, querying the total number of turns, and
+ *       managing additional metadata associated with the game.
  *
- * This interface ensure the chess game's notation, maintaining valid indexing
- * for turns and ensuring correct metadata.
+ *       This interface is designed to be implemented by classes that track the
+ *       game's progress through chess notations and metadata, allowing for
+ *       modifications, retrieval, and manipulation of the game's moves and
+ *       associated information.
  *
- * This interface extends Iterable<ChessNotation>, allowing for easy iteration
- * through the game's recorded notations.
+ *       This interface ensure the chess game's notation, maintaining valid
+ *       indexing for turns and ensuring correct metadata.
+ *
+ *       This interface extends Iterable<ChessNotation>, allowing for easy
+ *       iteration through the game's recorded notations.
  */
 public interface ChessNotationKernel
         extends Standard<ChessNotation>, Iterable<String> {

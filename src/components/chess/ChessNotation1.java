@@ -14,7 +14,7 @@ public abstract class ChessNotation1 extends ChessNotationSecondary {
     /*
      * Internal storage for chess turns.
      */
-    private final List<String[]> turns;
+    protected List<String[]> turns = new ArrayList<>();
 
     /*
      * Internal storage for metadata.
@@ -35,7 +35,7 @@ public abstract class ChessNotation1 extends ChessNotationSecondary {
 
     @Override
     public void addTurn(int x, String whiteMove, String blackMove) {
-        //check preconditions
+        // check preconditions
         if (x < 0 || x > this.turns.size()) {
             throw new IndexOutOfBoundsException("Index x out of bounds");
         }
@@ -45,8 +45,14 @@ public abstract class ChessNotation1 extends ChessNotationSecondary {
                     "Move notation cannot be null or empty");
         }
 
-        //add the turn at the specified index
+        // Debugging: Print the current state of the turns list before adding
+        System.out.println("Before adding turn: " + this.turns);
+
+        // add the turn at the specified index
         this.turns.add(x, new String[] { whiteMove, blackMove });
+
+        // Debugging: Print the turns list after adding the new turn
+        System.out.println("After adding turn: " + this.turns);
     }
 
     @Override

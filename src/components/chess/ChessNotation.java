@@ -9,13 +9,6 @@ package components.chess;
 public interface ChessNotation extends ChessNotationKernel {
 
     /**
-     * Displays the entire chess game, including all moves and game details.
-     * This method output the moves in a format graphically depending on the
-     * implementation.
-     */
-    void displayGame();
-
-    /**
      * Dumps the chess notation, providing a detailed or raw textual
      * representation of the moves and metadata for the game. This method can be
      * used for debugging or exporting the game notation.
