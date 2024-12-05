@@ -11,12 +11,12 @@ import java.util.Map;
  */
 public abstract class ChessNotation1 extends ChessNotationSecondary {
 
-    /*
+    /**
      * Internal storage for chess turns.
      */
     protected List<String[]> turns = new ArrayList<>();
 
-    /*
+    /**
      * Internal storage for metadata.
      */
     private final Map<String, String> metadata;
@@ -33,26 +33,13 @@ public abstract class ChessNotation1 extends ChessNotationSecondary {
         return this.metadata;
     }
 
+    // In addTurn(), make sure you are adding moves correctly
     @Override
-    public void addTurn(int x, String whiteMove, String blackMove) {
-        // check preconditions
-        if (x < 0 || x > this.turns.size()) {
-            throw new IndexOutOfBoundsException("Index x out of bounds");
-        }
-        if (whiteMove == null || whiteMove.isEmpty() || blackMove == null
-                || blackMove.isEmpty()) {
-            throw new IllegalArgumentException(
-                    "Move notation cannot be null or empty");
-        }
-
-        // Debugging: Print the current state of the turns list before adding
-        System.out.println("Before adding turn: " + this.turns);
-
-        // add the turn at the specified index
-        this.turns.add(x, new String[] { whiteMove, blackMove });
-
-        // Debugging: Print the turns list after adding the new turn
-        System.out.println("After adding turn: " + this.turns);
+    public void addTurn(int turnIndex, String whiteMove, String blackMove) {
+        String[] turn = new String[2];
+        turn[0] = whiteMove;
+        turn[1] = blackMove;
+        this.turns.add(turn); // Add the move to the turns list
     }
 
     @Override

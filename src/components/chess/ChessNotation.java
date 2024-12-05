@@ -1,10 +1,13 @@
 package components.chess;
 
 /**
- * The ChessNotation interface extends ChessNotationKernel and adds additional
- * functionalities specific to displaying and analyzing chess games. It includes
- * methods to display the game, dump the notation, and calculate the number of
- * checks (including checkmate) in the game.
+ * @author Othon DeAssis
+ * @date 12/04/2024
+ *
+ *       The ChessNotation interface extends ChessNotationKernel and adds
+ *       additional functionalities specific to displaying and analyzing chess
+ *       games. It includes methods to display the game, dump the notation, and
+ *       calculate the number of checks (including checkmate) in the game.
  */
 public interface ChessNotation extends ChessNotationKernel {
 
