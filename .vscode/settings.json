@@ -26,8 +26,9 @@
     "java.format.settings.url": ".vscode/osu-cse-formatter.xml",
     "java.format.settings.profile": "OSU CSE",
     "java.project.sourcePaths": [
+        "test",
         "src",
-        "test"
+        "examples/components/chess"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
@@ -38,5 +39,6 @@
         "qualifyMembers",
         "addOverride"
     ],
-    "java.debug.settings.vmArgs": "-ea"
+    "java.debug.settings.vmArgs": "-ea",
+    "java.debug.settings.onBuildFailureProceed": true
 }

@@ -1,72 +1,32 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+Othon DeAssis 12/04/2024
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project adheres to [Calendar Versioning](https://calver.org/) of
-the following form: YYYY.0M.0D.
+I have completed:
+-Finalized ChessNotation.java
+-Finalized ChessNotation1.java
+-Finalized ChessNotationKernel.java
+-Finalized ChessNotationSecondary.java
 
-## [Unreleased]
+I have created:
+-ChessNotationKernelTest.java: Developed a comprehensive test suite to validate the behavior and functionality of methods defined in the ChessNotationKernel class, ensuring all edge cases and expected behaviors are properly tested.
 
-## [2024.08.07]
+-ChessNotationSecondaryTest.java: Created detailed tests for the ChessNotationSecondary class, covering all possible scenarios for methods like addTurn, removeTurn, dumpNotation, and metadata handling.
 
-### Added
+-Completed Component Finishing Touches.
 
-- Added `/bin` to `.gitignore`, so binaries are no longer committed
-- Added the TODO tree extensions to `extensions.json`
-- Added the `todo-tree.general.showActivityBarBadge` setting to `settings.json`
-- Added the `todo-tree.tree.showCountsInTree` setting to `settings.json`
-- Added the VSCode PDF extension to `extensions.json`
-- Added `java.debug.settings.vmArgs` setting to enable assertions (i.e., `-ea`)
-- Added information about making branches to all parts of the project
-- Added information about how to update the CHANGELOG to every part of the
-  project
-- Added information about how to make a pull request to every part of the
-  project
-
-### Changed
-
-- Updated `settings.json` to format document on save using `editor.formatOnSave`
-  setting
-- Updated `settings.json` to exclude certain files from markdown to PDF
-  generation using `markdown-pdf.convertOnSaveExclude` setting
-- Updated `settings.json` to use latest `java.cleanup.actions` setting
-- Updated `settings.json` to automatically choose line endings using `files.eol`
-  setting
-- Updated `settings.json` to organize imports automatically on save using the
-  `editor.codeActionsOnSave` and `source.organizeImports` settings
-- Changed the component brainstorming assignment to ask a few clarifying
-  questions
-- Changed the component brainstorming example from `Point3D` to `NaturalNumber`
-  to avoid the getter/setter trend
-- Updated assignment feedback sections to include a link to a survey that
-  I'll actually review
-- Updated README to include step about using template repo
-- Updated part 3 rubric to include a hierarchy diagram
-- Updated part 6 rubric to account for overall polish
-
-### Fixed
-
-- Fixed issue where checkstyle paths would not work on MacOS
-
-### Removed
-
-- Removed `java.saveActions.organizeImports` setting from `settings.json`
-- Removed references to `Point3D` completely
-
-## [2024.01.07]
+## 2024.12.04
 
 ### Added
 
-- Added a list of extensions to capture the ideal student experience
-- Added PDFs to the `.gitignore`
-- Added the OSU checkstyle config file
-- Added the OSU formatter config file
-- Added a `settings.json` file to customize the student experience
-- Created a README at the root to explain how to use the template repo
-- Created initial drafts of the six portfolio assessments
-- Added READMEs to key folders like `test` and `lib` to explain their purpose
+- 5 tests per method: Implemented a thorough set of tests for every method in ChessNotationKernel and ChessNotationSecondary, covering all possible conditions and edge cases (e.g., empty inputs, invalid values, and boundary conditions).
 
-[unreleased]: https://github.com/jrg94/portfolio-project/compare/v2024.08.07...HEAD
-[2024.08.07]: https://github.com/jrg94/portfolio-project/compare/v2024.01.07...v2024.08.07
-[2024.01.07]: https://github.com/jrg94/portfolio-project/releases/tag/v2024.01.07
+- Test example for real-world use: Developed a sample test case that demonstrates the practical use of the chess notation components, simulating a full chess game with move inputs, metadata addition, and turn removals
+
+### Updated
+
+- Fixed checkAmount in ChessNotationSecondary: Corrected the logic for counting turns in ChessNotationSecondary, ensuring accurate tracking of the number of turns played in the game.
+
+- Fixed dumpNotation in ChessNotationSecondary: Addressed an issue where the chess notation dump failed to display correctly when no turns were added or when the list was empty. Now provides a clear message when there are no recorded moves.
+
+- Fixed addMetadata in ChessNotationKernel: Resolved a bug in the addMetadata method, ensuring that metadata is properly stored and retrieved in the ChessNotationKernel class, allowing for more efficient data management.

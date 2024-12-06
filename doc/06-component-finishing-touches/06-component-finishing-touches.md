@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Othon DeAssis
+- **Dot Number**: deassis.2
+- **Due Date**: 12/04/2024
 
 ## Assignment Overview
 
@@ -49,8 +49,6 @@ Many of these additional techniques are somewhat out of the scope of this
 course, but just knowing about them could set you up for long term success.
 
 ## Assignment Checklist
-
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -131,8 +129,6 @@ merges, you will need to pull the changes from main into your current branch
 to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
-
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -298,18 +294,20 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I feel way better now that I finished the Project Portfolio.  I feel better with software development
+now that I have practice implementing my own component rather than studying one and not understanding
+how it was created.  This project helped me truly understand how they are created and how they can be tested.  I feel more confident in my ability as a software developer.  I now believe the best practice is from building something from scratch when it comes to component making.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+Yes, and the biggest one is how the hierachy works in OSU components.  I always thought, since Software 1, that I needed a deeper understanding of how the structure is created or works, but I believe that OSU failed in that way and I never felt supported in learning these materials.  The project portfolio has helped me grasp on not just OSU components but also in my development work.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+While I do enjoy it, I still feel behind even though I learned alot from this project.  I wish we had more projects like this rather than the weekly projects we get in software 1 and 2.  I remain motivated however because my passion in CSE is high, even though these classes are very difficult to me.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -317,29 +315,32 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+Some skills I have picked up is how to properly create contracts and
+test them, read syntax and understand.  However the biggest skill I have gained from this was using Java components rather than OSU components.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Java components
+- JUnit testing
+- Understanding and fixing syntax quicker.
+- Create contracts and the hierachy.
+- Making methods for secondary and kernel files.
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+This affected my career trajectory a little bit, but I still would like to work in the fields of computers.  However, being an implementer and learning a gigantic amount of components without that much support really hurts.  I believe jobs or corporations would help me better than OSU has unfortunately.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+Some things I would like to continue is creating software and hardware to help others in life and improves them.  I believe Jeremy Grifski is an amazing mentor that could help me stay on my path, because honestly I felt like switching majors because how tough it is, how unsupported I feel even though I ask for help, and the competition being rough towards those that struggle or need a helping hand.  Thanks to Jeremy, I still want to pursue in CSE and nothing else.
 
 ### Changelog
-
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -374,8 +375,6 @@ like to accomplish that, you will need to make GitHub releases after each pull
 request merge (or at least tag your commits). This is not required.
 
 ### Submission
-
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
@@ -427,7 +426,4 @@ If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
 
-<!-- TODO: follow the link to share your feedback then delete this comment -->
-
-[markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
 [survey]: https://forms.gle/dumXHo6A4Enucdkq9
